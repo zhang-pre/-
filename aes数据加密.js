@@ -1,0 +1,14 @@
+window = global;
+const CryptoJS = require("crypto-js")
+function Decrypt(word, keyStr) {
+      keyStr = keyStr ? keyStr : `3sd&d24h@$udD2s*`;
+      var key = CryptoJS.enc.Utf8.parse(keyStr);
+      var decrypt = CryptoJS.AES.decrypt(word, key, {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7
+      });
+      return CryptoJS.enc.Utf8.stringify(decrypt).toString();
+    }
+word =  "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"
+
+    console.log(Decrypt(word))
